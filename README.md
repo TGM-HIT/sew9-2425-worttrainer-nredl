@@ -15,3 +15,5 @@ Ein Rechtschreibtrainer, bei dem der Benutzer zu einem Bild das passende Wort ei
 1. Klone das Repository:
    ```bash
    git clone https://github.com/TGM-HIT/sew9-2425-worttrainer-nredl
+
+2. tbd
