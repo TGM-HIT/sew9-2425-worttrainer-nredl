@@ -82,4 +82,12 @@ public class WortTrainer {
         }
         return wordList.get(new Random().nextInt(wordList.size()));
     }
+
+    public void save() {
+
+    }
+
+    public void load() {
+
+    }
 }

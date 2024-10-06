@@ -31,7 +31,7 @@ public class JSONTest {
 
     @Test
     void testSaveSession() {
-        jsonHandler.saveSession(wortTrainer, testFileName);
+        jsonHandler.saveSession(wortTrainer);
 
         File file = new File(testFileName);
         assertTrue(file.exists(), "Die JSON-Datei wurde nicht erstellt.");
@@ -39,9 +39,9 @@ public class JSONTest {
 
     @Test
     void testLoadSession() {
-        jsonHandler.saveSession(wortTrainer, testFileName);
+        jsonHandler.saveSession(wortTrainer);
         WortTrainer loadedTrainer = new WortTrainer();
-        jsonHandler.loadSession(loadedTrainer, testFileName);
+        jsonHandler.loadSession(loadedTrainer);
 
         assertEquals(wortTrainer.getListIndex(), loadedTrainer.getListIndex());
         assertEquals(wortTrainer.getCorrectGuessCount(), loadedTrainer.getCorrectGuessCount());
