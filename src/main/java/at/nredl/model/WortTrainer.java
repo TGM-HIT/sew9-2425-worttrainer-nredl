@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Klasse die den Worttrainer, dessen Logik und Attribute verwaltet.
+ * @author Nikolaus Redl
+ * @version 05-10-2024
+ */
 public class WortTrainer {
 
     private List<Wort> wordList;
@@ -58,6 +63,17 @@ public class WortTrainer {
            correctGuessCount++;
        }
        return b;
+    }
+
+    public void setListIndex(int listIndex) {
+        if(listIndex < 0) {
+            throw new IllegalArgumentException("Der aktuelle listIndex darf nicht kleiner als 0 sein.");
+        }
+        this.listIndex = listIndex;
+    }
+
+    public int getListIndex() {
+        return this.listIndex;
     }
 
     public Wort randomWord() {

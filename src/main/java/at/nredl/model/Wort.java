@@ -3,6 +3,11 @@ package at.nredl.model;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * Klasse die ein Wort mit dem zugehörigen Bild mittels dessen URL darstellt.
+ * @author Nikolaus Redl
+ * @version 05-10-2024
+ */
 public class Wort {
 
     private String bezeichnung;
