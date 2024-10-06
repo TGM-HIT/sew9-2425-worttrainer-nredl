@@ -17,6 +17,9 @@ import java.util.List;
  */
 public class JSONHandler implements JSONStrategy {
 
+    public JSONHandler() {
+
+    }
     @Override
     public void saveSession(WortTrainer wortTrainer, String fileName) {
         JSONObject json = new JSONObject();
