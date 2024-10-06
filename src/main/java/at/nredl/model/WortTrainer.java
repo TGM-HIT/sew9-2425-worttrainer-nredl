@@ -1,6 +1,8 @@
 package at.nredl.model;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class WortTrainer {
 
@@ -10,7 +12,7 @@ public class WortTrainer {
     private int totalGuessCount;
 
     public WortTrainer() {
-
+        this.wordList = new ArrayList<>();
     }
 
     public void setWordList(List<Wort> wordList) {
@@ -58,5 +60,10 @@ public class WortTrainer {
        return b;
     }
 
-
+    public Wort randomWord() {
+        if(wordList.isEmpty()) {
+            throw new IllegalArgumentException("Die Wortliste darf nicht leer sein wenn Sie ein zufälliges Wort wollen.")
+        }
+        return wordList.get(new Random().nextInt(wordList.size()));
+    }
 }
