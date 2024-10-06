@@ -62,7 +62,7 @@ public class WortTrainer {
 
     public Wort randomWord() {
         if(wordList.isEmpty()) {
-            throw new IllegalArgumentException("Die Wortliste darf nicht leer sein wenn Sie ein zufälliges Wort wollen.")
+            throw new IllegalArgumentException("Die Wortliste darf nicht leer sein wenn Sie ein zufälliges Wort wollen.");
         }
         return wordList.get(new Random().nextInt(wordList.size()));
     }
