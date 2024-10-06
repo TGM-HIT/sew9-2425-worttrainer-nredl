@@ -14,10 +14,10 @@ public class Wort {
     private String url;
 
     public Wort(String bezeichnung, String url) {
-        if(bezeichnung == null) {
+        if(bezeichnung.isEmpty()) {
             throw new IllegalArgumentException("Die Bezeichnung vom Wort darf nicht leer sein.");
         }
-        if(url == null) {
+        if(url.isEmpty()) {
             throw new IllegalArgumentException("Die URL vom Wort darf nicht leer sein.");
         }
         this.bezeichnung = bezeichnung;
@@ -37,13 +37,14 @@ public class Wort {
 
     public void setUrl(String url) {
         if(url.isEmpty()) {
-            throw new IllegalArgumentException("Die Url darf nicht leer sein.");
+            throw new IllegalArgumentException("Die URL darf nicht leer sein.");
         }
         try {
             URL tempUrl = new URL(url);
             this.url = url;
         } catch (MalformedURLException mue) {
             mue.printStackTrace();
+            throw new IllegalArgumentException("Die URL ist ungültig");
         }
     }
 

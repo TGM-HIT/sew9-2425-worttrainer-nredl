@@ -16,8 +16,11 @@ public class WortTrainer {
     private int correctGuessCount;
     private int totalGuessCount;
 
+    private JSONStrategy jsonHandler = new JSONHandler();
+
     public WortTrainer() {
         this.wordList = new ArrayList<>();
+        this.jsonHandler.loadSession(this);
     }
 
     public void setWordList(List<Wort> wordList) {
@@ -84,10 +87,11 @@ public class WortTrainer {
     }
 
     public void save() {
-
+        this.jsonHandler.saveSession(this);
     }
 
     public void load() {
-
+        this.jsonHandler.loadSession(this);
+        this.listIndex = new Random().nextInt(wordList.size());
     }
 }
