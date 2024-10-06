@@ -14,7 +14,14 @@ public class Wort {
     private String url;
 
     public Wort(String bezeichnung, String url) {
-
+        if(bezeichnung == null) {
+            throw new IllegalArgumentException("Die Bezeichnung vom Wort darf nicht leer sein.");
+        }
+        if(url == null) {
+            throw new IllegalArgumentException("Die URL vom Wort darf nicht leer sein.");
+        }
+        this.bezeichnung = bezeichnung;
+        this.url = url;
     }
 
     public void setBezeichnung(String bezeichnung) {
