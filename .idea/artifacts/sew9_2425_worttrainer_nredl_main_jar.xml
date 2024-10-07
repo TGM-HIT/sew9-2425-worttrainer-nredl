@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sew9-2425-worttrainer-nredl.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sew9_2425_worttrainer_nredl_main_jar</output-path>
+    <root id="archive" name="sew9-2425-worttrainer-nredl.main.jar">
+      <element id="module-output" name="sew9-2425-worttrainer-nredl.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.json/json/20240303/ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a/json-20240303.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -9,6 +9,11 @@ import java.awt.event.ActionListener;
 import java.net.MalformedURLException;
 import java.util.Objects;
 
+/**
+ * Controller-Klasse
+ * @author Nikolaus Redl
+ * @version 06-10-2024
+ */
 public class Controller implements ActionListener {
     private WortTrainer wortTrainer;
     private Panel panel;
