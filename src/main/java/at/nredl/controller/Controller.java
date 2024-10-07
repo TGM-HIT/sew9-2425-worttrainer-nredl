@@ -54,6 +54,15 @@ public class Controller implements ActionListener {
                 throw new RuntimeException(ex);
             }
         }
+        else if(Objects.equals(actionCommand, "reset")) {
+            this.wortTrainer.setCorrectGuessCount(0);
+            this.wortTrainer.setTotalGuessCount(0);
+            try {
+                this.panel.next(this.wortTrainer.getCurrentWord().getUrl());
+            } catch (MalformedURLException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
     }
 
     public int getCorrect() {

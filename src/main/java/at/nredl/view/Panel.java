@@ -16,7 +16,7 @@ public class Panel extends JPanel {
     private Controller controller;
     private JLabel correctGuess, totalGuess, img;
     private JTextField input;
-    private JButton save, load;
+    private JButton save, load, reset;
     private String url;
 
     public Panel(Controller controller) throws MalformedURLException {
@@ -42,7 +42,7 @@ public class Panel extends JPanel {
         this.add(center, BorderLayout.CENTER);
 
         JPanel bottom = new JPanel();
-        bottom.setLayout(new GridLayout(3,2));
+        bottom.setLayout(new GridLayout(4,2));
         JLabel textTotal = new JLabel("Gesamtversuche:");
         JLabel textCorrect = new JLabel("Richtige Versuche:");
         this.correctGuess = new JLabel(String.valueOf(this.controller.getCorrect()));
@@ -53,8 +53,10 @@ public class Panel extends JPanel {
         bottom.add(correctGuess);
         this.save = new JButton("Speichern");
         this.load = new JButton("Laden");
+        this.reset = new JButton("Statistik zuruecksetzen");
         bottom.add(save);
         bottom.add(load);
+        bottom.add(reset);
 
         this.add(bottom, BorderLayout.PAGE_END);
 
@@ -64,6 +66,8 @@ public class Panel extends JPanel {
         this.save.setActionCommand("save");
         this.load.addActionListener(this.controller);
         this.load.setActionCommand("load");
+        this.reset.addActionListener(this.controller);
+        this.reset.setActionCommand("reset");
 
     }
 
