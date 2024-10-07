@@ -36,7 +36,7 @@ public class JSONHandler implements JSONStrategy {
         }
         json.put("words", wordsArray);
 
-        try (FileWriter file = new FileWriter("wortTrainerSave")) {
+        try (FileWriter file = new FileWriter("wortTrainerSave.json")) {
             file.write(json.toString());
         } catch(IOException ioe) {
             ioe.printStackTrace();
@@ -45,7 +45,7 @@ public class JSONHandler implements JSONStrategy {
 
     @Override
     public void loadSession(WortTrainer wortTrainer) {
-        try(FileReader reader = new FileReader("wortTrainerSave")) {
+        try(FileReader reader = new FileReader("wortTrainerSave.json")) {
             JSONObject json = new JSONObject(new JSONTokener(reader));
             int current = json.getInt("current");
             int total = json.getInt("total");
