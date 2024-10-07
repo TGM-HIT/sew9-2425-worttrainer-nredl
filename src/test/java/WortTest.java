@@ -7,7 +7,7 @@ public class WortTest {
     @Test
     void testConstructorValid() {
         Wort wort = new Wort("Hund", "http://example.com/hund.jpg");
-        assertEquals("Hund", wort.getWort());
+        assertEquals("Hund", wort.getBezeichnung());
         assertEquals("http://example.com/hund.jpg", wort.getUrl());
     }
 
@@ -31,7 +31,7 @@ public class WortTest {
     void testSetValidBezeichnung() {
         Wort wort = new Wort("Hund", "http://example.com/hund.jpg");
         wort.setBezeichnung("Katze");
-        assertEquals("Katze", wort.getWort());
+        assertEquals("Katze", wort.getBezeichnung());
     }
 
     @Test

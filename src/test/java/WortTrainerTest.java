@@ -27,7 +27,7 @@ public class WortTrainerTest {
         newWordList.add(new Wort("Maus", "http://example.com/maus.jpg"));
         wortTrainer.setWordList(newWordList);
         assertEquals(1, wortTrainer.getWordList().size());
-        assertEquals("Maus", wortTrainer.getWordList().get(0).getWort());
+        assertEquals("Maus", wortTrainer.getWordList().get(0).getBezeichnung());
     }
 
     @Test
@@ -66,13 +66,6 @@ public class WortTrainerTest {
         assertFalse(wortTrainer.check("Katze"));
         assertEquals(0, wortTrainer.getCorrectGuessCount());
         assertEquals(1, wortTrainer.getTotalGuessCount());
-    }
-
-    @Test
-    void testRandomWord() {
-        Wort randomWord = wortTrainer.randomWord();
-        assertNotNull(randomWord);
-        assertTrue(wortTrainer.getWordList().contains(randomWord));
     }
 
     @Test

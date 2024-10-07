@@ -30,7 +30,7 @@ public class JSONHandler implements JSONStrategy {
         JSONArray wordsArray = new JSONArray();
         for (Wort wort : wortTrainer.getWordList()) {
             JSONObject wordJson = new JSONObject();
-            wordJson.put("word", wort.getWort());
+            wordJson.put("word", wort.getBezeichnung());
             wordJson.put("url", wort.getUrl());
             wordsArray.put(wordJson);
         }

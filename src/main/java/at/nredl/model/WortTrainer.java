@@ -63,12 +63,7 @@ public class WortTrainer {
     }
 
     public boolean check(String input) {
-       totalGuessCount++;
-       boolean b = input.equalsIgnoreCase(currentWord().getWort());
-       if(b) {
-           correctGuessCount++;
-       }
-       return b;
+       return input.equalsIgnoreCase(currentWord().getBezeichnung());
     }
 
     public void setListIndex(int listIndex) {
@@ -82,18 +77,19 @@ public class WortTrainer {
         return this.listIndex;
     }
 
-    public Wort randomWord() {
-        if(wordList.isEmpty()) {
-            throw new IllegalArgumentException("Die Wortliste darf nicht leer sein wenn Sie ein zufälliges Wort wollen.");
-        }
-        return wordList.get(new Random().nextInt(wordList.size()));
-    }
-
     public void save() {
         this.jsonHandler.saveSession(this);
     }
 
     public void load() {
         this.jsonHandler.loadSession(this);
+    }
+
+    public Wort getCurrentWord() {
+        return this.wordList.get(this.listIndex);
+    }
+
+    public void newIndex() {
+        this.listIndex = new Random().nextInt(wordList.size());
     }
 }

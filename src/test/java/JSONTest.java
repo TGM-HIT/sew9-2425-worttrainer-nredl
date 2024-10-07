@@ -52,7 +52,7 @@ public class JSONTest {
 
         assertEquals(originalWords.size(), loadedWords.size());
         for (int i = 0; i < originalWords.size(); i++) {
-            assertEquals(originalWords.get(i).getWort(), loadedWords.get(i).getWort());
+            assertEquals(originalWords.get(i).getBezeichnung(), loadedWords.get(i).getBezeichnung());
             assertEquals(originalWords.get(i).getUrl(), loadedWords.get(i).getUrl());
         }
     }

@@ -31,7 +31,7 @@ public class Wort {
         this.bezeichnung = bezeichnung;
     }
 
-    public String getWort() {
+    public String getBezeichnung() {
         return this.bezeichnung;
     }
 
